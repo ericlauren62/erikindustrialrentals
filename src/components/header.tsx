@@ -9,7 +9,7 @@ export default function Header() {
       <div className="hidden lg:flex items-center justify-end max-w-7xl gap-x-16 mx-auto mb-10">
         <div className="flex items-center gap-2 p-2 font-semibold">
           <BsTelephone />
-          <p className="hover:underline">844.873.4948</p>
+          <p className="hover:underline">515.215.5249</p>
         </div>
         <div className="flex items-center gap-2 p-2 font-semibold">
           <TfiWorld />

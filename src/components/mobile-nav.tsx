@@ -140,7 +140,13 @@ export default function MobileNav() {
           <SheetContent side="left" className="w-[300px]">
             <SheetHeader>
               <SheetTitle className="px-5  mt-8 bg-[#000a50]">
-                <Image src="/logo.png" alt="logo" height={180} width={180} className="object-cover object-center" />
+                <Image
+                  src="/logo.png"
+                  alt="logo"
+                  height={180}
+                  width={180}
+                  className="object-cover object-center"
+                />
               </SheetTitle>
               <SheetDescription>
                 <div className="flex items-center gap-2 p-3  text-base cursor-pointer hover:underline font-semibold">
@@ -153,7 +159,7 @@ export default function MobileNav() {
                 </div>
                 <div className="flex items-center gap-2 p-3 text-base font-semibold">
                   <BsTelephone />
-                  <p className="hover:underline">844.873.4948</p>
+                  <p className="hover:underline">515.215.5249</p>
                 </div>
                 <div>
                   {navLinks.map((link, id) => {
@@ -166,7 +172,11 @@ export default function MobileNav() {
                         <CollapsibleContent>
                           <ul className="space-y-3">
                             {link.sublinks.map((sublinks, id) => {
-                              return <li key={id} className="text-base cursor-pointer">{sublinks}</li>;
+                              return (
+                                <li key={id} className="text-base cursor-pointer">
+                                  {sublinks}
+                                </li>
+                              );
                             })}
                           </ul>
                         </CollapsibleContent>

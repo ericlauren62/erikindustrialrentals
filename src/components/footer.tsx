@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 pb-12">
         <div className="my-8">
           <p className="text-sm">24/7 Customer Care</p>
-          <p className="font-bold">844.873.4948</p>
+          <p className="font-bold">515.215.5249</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
           <div>
