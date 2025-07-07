@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { Users, Globe, Award, TrendingUp } from "lucide-react";
 import React from "react";
@@ -122,11 +122,11 @@ export default function AboutFeature() {
                     key={index}
                     className="p-0 overflow-hidden hover:shadow-lg transition-shadow"
                   >
-                    <div className="relative h-80 w-full">
+                    <div className="relative h-90 w-full">
                       <Image
                         src={executive.image || "/placeholder.svg"}
                         alt={`${executive.name}, ${executive.role} at Erik industrial & Construction Rentals`}
-                        className="object-cover object-top absolute inset-0"
+                        className="object-cover object-center absolute inset-0"
                         fill
                       />
                     </div>
