@@ -7,125 +7,14 @@ import { useState } from "react";
 import { BsTelephone } from "react-icons/bs";
 import { TfiWorld } from "react-icons/tfi";
 import { LuCircleUserRound } from "react-icons/lu";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
-import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-const rentSublinks = [
-  "All Equipment",
-  "Popular Rentals",
-  "Scissor Lifts",
-  "Boom Lifts",
-  "Telehandlers",
-  "Mini Excavators",
-  "Skid Steers & Track Loaders",
-  "Rental Resources",
-  "Rental Protection Plan (RPP)",
-];
-
-const buySublinks = [
-  "All Used Equipment",
-  "Popular Used Equipment",
-  "Buy Forklifts",
-  "Buy Scissor Lifts",
-  "Buy Boom Lifts",
-  "Buy Mini Excavators",
-  "Buy Compressors",
-  "Buying Resources",
-  "Financing",
-  "United Guard™",
-];
-
-const totalControlSublinks = [
-  "Account Dashboard",
-  "Invoices & Payments",
-  "Items On Rent",
-  "UR Mobile App",
-];
-
-const invoicesSublinks = ["Invoices", "Lien releases", "Apply for credit"];
-
-const locationsSublinks = ["Find a Location"];
-const trainingSublinks = [
-  "Course Catalog",
-  "Training Credentials",
-  "United Academy",
-  "About United Academy",
-  "Care & Support",
-  "United Academy - Course Catalog",
-];
-const solutionsSublinks = [
-  "Worksite Performance Solutions",
-  "Specialty Solutions",
-  "Power & HVAC",
-  "Climate Solutions",
-  "Fluid Solutions",
-  "Trench Safety",
-  "Reliable Onsite Services",
-  "Tool Solutions",
-  "Storage Container & Mobile Offices",
-  "Commercial Trucks",
-  "Flooring & Facility Solutions",
-  "Ground Protection Matting Solutions",
-  "Industry Solutions",
-  "Power Gen. & Distribution",
-  "Data Centers",
-  "Renewable Energy",
-  "Chemical",
-  "Oil & Gas Refining",
-  "Oilfield Services",
-  "Restoration & Remediation",
-  "Civi & Infrastructure",
-  "Government Solution",
-  "Emergency Solution",
-  "Emergency Response",
-];
-
-const servicesSublinks = [
-  "Digital Solutions",
-  "Total Control",
-  "Mobile App",
-  "Notifications",
-  "Benchmarking",
-  "Wedge",
-  "Downloadable Catalogs",
-  "Repair & Maintenance Services",
-  "Owned Equipment Service",
-  "Rental Equipment Service",
-  "Training Services",
-  "United Academy",
-];
-
-const safetySublinks = ["Safety Training", "Safety Articles"];
-const companySublinks = [
-  "About Us",
-  "Investor Relations",
-  "Sustainability",
-  "Careers",
-  "Events",
-  "In the News",
-  "Press Releases",
-  "Project Uptime Blog",
-];
-
-const navLinks = [
-  { name: "Rent", sublinks: rentSublinks, link: "/" },
-  { name: "Buy", sublinks: buySublinks, link: "/" },
-  { name: "Total Control", sublinks: totalControlSublinks, link: "/" },
-  { name: "Invoices & Payment", sublinks: invoicesSublinks, link: "/" },
-  { name: "Locations", sublinks: locationsSublinks, link: "/" },
-  { name: "Training", sublinks: trainingSublinks, link: "/" },
-  { name: "Solutions", sublinks: solutionsSublinks, link: "/" },
-  { name: "Services", sublinks: servicesSublinks, link: "/" },
-  { name: "Safety", sublinks: safetySublinks, link: "/" },
-  { name: "Company", sublinks: companySublinks, link: "/about" },
-];
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="h-[50px] lg:hidden">
+    <header className="h-[40px] lg:hidden">
       <nav className="flex items-center justify-between text-3xl py-5 px-4">
         <button className="cursor-pointer" onClick={() => setIsOpen(true)}>
           <GiHamburgerMenu />
@@ -145,11 +34,11 @@ export default function MobileNav() {
                   src="/logo.png"
                   alt="logo"
                   height={180}
-                  width={180}
+                  width={250}
                   className="object-cover object-center"
                 />
               </SheetTitle>
-              <SheetDescription>
+              <SheetDescription className="py-5">
                 <div className="flex items-center gap-2 p-3  text-base cursor-pointer hover:underline font-semibold">
                   <LuCircleUserRound className="font-bold text-lg" />
                   <p className="hover:underline">Sign In / Register</p>
@@ -163,27 +52,44 @@ export default function MobileNav() {
                   <p className="hover:underline">515.215.5249</p>
                 </div>
                 <div>
-                  {navLinks.map((link, id) => {
-                    return (
-                      <Collapsible key={id}>
-                        <CollapsibleTrigger className="flex items-center w-full justify-between">
-                          <span className="text-lg text-gray-800 font-bold py-4">{link.name}</span>
-                          <ChevronDown />
-                        </CollapsibleTrigger>
-                        <CollapsibleContent>
-                          <ul className="space-y-3">
-                            {link.sublinks.map((sublinks, id) => {
-                              return (
-                                <li key={id} className="text-lg cursor-pointer">
-                                  <Link href={link.link}>{sublinks}</Link>
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        </CollapsibleContent>
-                      </Collapsible>
-                    );
-                  })}
+                  <ul className="mt-8 px-6 space-y-6">
+                    <li className="text-lg flex items-center gap-x-6 justify-between font-semibold cursor-pointer">
+                      <Link href="/about">About</Link>
+                      <span>
+                        <FaLongArrowAltRight className="inline-block text-orange-500" />
+                      </span>
+                    </li>
+                    <li className="text-lg flex items-center gap-x-6  justify-between font-semibold cursor-pointer">
+                      <Link href="/contact">Contact</Link>
+                      <span>
+                        <FaLongArrowAltRight className="inline-block text-orange-500" />
+                      </span>
+                    </li>
+                    <li className="text-lg flex items-center gap-x-6  justify-between font-semibold cursor-pointer">
+                      <Link href="/">Rent</Link>
+                      <span>
+                        <FaLongArrowAltRight className="inline-block text-orange-500" />
+                      </span>
+                    </li>
+                    <li className="text-lg flex items-center gap-x-6  justify-between font-semibold cursor-pointer">
+                      <Link href="/">Buy</Link>
+                      <span>
+                        <FaLongArrowAltRight className="inline-block text-orange-500" />
+                      </span>
+                    </li>
+                    <li className="text-lg flex items-center gap-x-6  justify-between font-semibold cursor-pointer">
+                      <Link href="/">Safety</Link>
+                      <span>
+                        <FaLongArrowAltRight className="inline-block text-orange-500" />
+                      </span>
+                    </li>
+                    <li className="text-lg flex items-center gap-x-6  justify-between font-semibold cursor-pointer">
+                      <Link href="/">Solutions</Link>
+                      <span>
+                        <FaLongArrowAltRight className="inline-block text-orange-500" />
+                      </span>
+                    </li>
+                  </ul>
                 </div>
               </SheetDescription>
             </SheetHeader>
