@@ -41,8 +41,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold mb-4">Equipment</h3>
-            <ul className="space-y-5 text-sm">
+            <h3 className="font-bold text-lg lg:text-base mb-4">Equipment</h3>
+            <ul className="space-y-5 text-base lg:text-sm">
               <li>
                 <Link href="#" className="hover:underline">
                   Rent Equipment
@@ -82,8 +82,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold mb-4">Solutions & Services</h3>
-            <ul className="space-y-5 text-sm">
+            <h3 className="font-bold mb-4 text-lg lg:text-base">Solutions & Services</h3>
+            <ul className="space-y-5 lg:text-sm">
               <li>
                 <Link href="#" className="hover:underline">
                   Fuel Control
@@ -113,8 +113,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold mb-4">Support</h3>
-            <ul className="space-y-5 text-sm">
+            <h3 className="font-bold mb-4 text-lg lg:text-base">Support</h3>
+            <ul className="space-y-5 lg:text-sm">
               <li>
                 <Link href="#" className="hover:underline">
                   Find a Location
@@ -134,8 +134,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold mb-4">About Us</h3>
-            <ul className="space-y-5 text-sm">
+            <h3 className="font-bold mb-4 text-lg lg:text-base">About Us</h3>
+            <ul className="space-y-5 lg:text-sm">
               <li>
                 <Link href="#" className="hover:underline">
                   Corporate Fact Sheet
@@ -165,8 +165,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold mb-4">Careers</h3>
-            <ul className="space-y-5 text-sm">
+            <h3 className="font-bold mb-4 text-lg lg:text-base">Careers</h3>
+            <ul className="space-y-5 lg:text-sm">
               <li>
                 <Link href="#" className="hover:underline">
                   Why Career & Development
@@ -191,8 +191,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold mb-4">Investor Relations</h3>
-            <ul className="space-y-5 text-sm">
+            <h3 className="font-bold mb-4 text-lg lg:text-base">Investor Relations</h3>
+            <ul className="space-y-5 lg:text-sm">
               <li>
                 <Link href="#" className="hover:underline">
                   Annual Reports
@@ -209,31 +209,31 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-custom-blue">
-        <div className="container mx-auto lg:px-4 py-6">
+        <div className="container mx-auto px-6 lg:px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm">
             <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-6 mb-4 md:mb-0">
-              <span>© 2025 Erik industrial & Construction Rentals, Inc.</span>
-              <Link href="#" className="hover:underline">
+              <span className="text-base lg:text-sm">© 2025 Erik industrial & Construction Rentals, Inc.</span>
+              <Link href="#" className="hover:underline text-base lg:text-sm">
                 Privacy Policy
               </Link>
 
-              <Link href="#" className="hover:underline">
+              <Link href="#" className="hover:underline text-base lg:text-sm">
                 Terms of Use
               </Link>
 
-              <Link href="#" className="hover:underline">
+              <Link href="#" className="hover:underline text-base lg:text-sm">
                 Legal Terms and Conditions
               </Link>
 
-              <Link href="#" className="hover:underline">
+              <Link href="#" className="hover:underline text-base lg:text-sm">
                 Equipment Checkout
               </Link>
 
-              <Link href="#" className="hover:underline">
+              <Link href="#" className="hover:underline text-base lg:text-sm">
                 Branch Directory
               </Link>
 
-              <Link href="#" className="hover:underline">
+              <Link href="#" className="hover:underline text-base lg:text-sm">
                 Cookie Settings
               </Link>
             </div>

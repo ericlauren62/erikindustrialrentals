@@ -110,15 +110,15 @@ const companySublinks = [
 ];
 
 const navLinks = [
-  { name: "Rent", sublinks: rentSublinks },
-  { name: "Buy", sublinks: buySublinks },
-  { name: "Total Control", sublinks: totalControlSublinks },
-  { name: "Invoices & Payment", sublinks: invoicesSublinks },
-  { name: "Locations", sublinks: locationsSublinks },
-  { name: "Training", sublinks: trainingSublinks },
-  { name: "Solutions", sublinks: solutionsSublinks },
-  { name: "Services", sublinks: servicesSublinks },
-  { name: "Safety", sublinks: safetySublinks },
+  { name: "Rent", sublinks: rentSublinks, link: "/" },
+  { name: "Buy", sublinks: buySublinks, link: "/" },
+  { name: "Total Control", sublinks: totalControlSublinks, link: "/" },
+  { name: "Invoices & Payment", sublinks: invoicesSublinks, link: "/" },
+  { name: "Locations", sublinks: locationsSublinks, link: "/" },
+  { name: "Training", sublinks: trainingSublinks, link: "/" },
+  { name: "Solutions", sublinks: solutionsSublinks, link: "/" },
+  { name: "Services", sublinks: servicesSublinks, link: "/" },
+  { name: "Safety", sublinks: safetySublinks, link: "/" },
   { name: "Company", sublinks: companySublinks, link: "/about" },
 ];
 
@@ -174,9 +174,8 @@ export default function MobileNav() {
                           <ul className="space-y-3">
                             {link.sublinks.map((sublinks, id) => {
                               return (
-                                <li key={id} className="text-base cursor-pointer">
-                                  {sublinks}
-                                  <Link href={link?.link || "#"}></Link>
+                                <li key={id} className="text-lg cursor-pointer">
+                                  <Link href={link.link}>{sublinks}</Link>
                                 </li>
                               );
                             })}
