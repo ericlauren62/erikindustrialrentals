@@ -5,8 +5,8 @@ import { LuCircleUserRound } from "react-icons/lu";
 
 export default function Header() {
   return (
-    <header className=" bg-[#000a50] text-white min-h-35 shadow-md pb-5 border-b border-[#000d6e]">
-      <div className="hidden lg:flex items-center justify-end max-w-7xl gap-x-16 mx-auto mb-10">
+    <header className=" bg-[#000a50] px-4 text-white min-h-35 shadow-md pb-5 border-b border-[#000d6e]">
+      <div className="hidden lg:flex items-center justify-end max-w-7xl gap-x-16 mx-auto">
         <div className="flex items-center gap-2 p-2 font-semibold">
           <BsTelephone />
           <p className="hover:underline">515.215.5249</p>

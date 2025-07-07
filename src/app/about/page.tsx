@@ -5,6 +5,7 @@ import Header from "@/components/header";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Award, Globe, TrendingUp } from "lucide-react";
+import Head from "next/head";
 import Image from "next/image";
 
 export default function AboutPage() {
@@ -22,10 +23,10 @@ export default function AboutPage() {
       bio: "Jessica brings extensive financial expertise and strategic leadership to drive Erik industrial & Construction Rentals' continued growth.",
     },
     {
-      name: "Dale A. Asplund",
+      name: "Dean S. Erik",
       role: "Chairman of the Board",
-      image: "/ceo2.jpg",
-      bio: "Dale provides strategic oversight and governance leadership with decades of industry experience.",
+      image: "/ceo3.jpg",
+      bio: "Dean provides strategic oversight and governance leadership with decades of industry experience.",
     },
   ];
 
@@ -38,18 +39,25 @@ export default function AboutPage() {
 
   return (
     <>
+      <Head>
+        <title>
+          About Us - Erik industrial & Construction Rentals - Industrial & Construction Equipment
+          Rentals & Tools
+        </title>
+        <meta name="description" content="Learn about our company and what we do" />
+      </Head>
       <Header />
       <div className="min-h-screen bg-white">
         <section className="relative bg-[#0f1432] text-white overflow-hidden">
-            <Image src="/about.jpg" fill alt="" className="object-cover opacity-20" />
+          <Image src="/about.jpg" fill alt="" className="object-cover opacity-20" />
           <div className="relative container mx-auto px-4 py-24">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-3xl lg:text-5xl font-bold mb-6">
                 About Erik industrial & Construction Rentals
               </h1>
               <p className="lg:text-xl mb-8 leading-relaxed">
-                North America&apos;s largest equipment rental company, serving construction, industrial,
-                and specialty markets with unmatched expertise and innovation.
+                North America&apos;s largest equipment rental company, serving construction,
+                industrial, and specialty markets with unmatched expertise and innovation.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {stats.map((stat, index) => (
@@ -122,7 +130,7 @@ export default function AboutPage() {
                     key={index}
                     className="p-0 overflow-hidden hover:shadow-lg transition-shadow"
                   >
-                    <div className="relative h-55 w-full">
+                    <div className="relative h-80 w-full">
                       <Image
                         src={executive.image || "/placeholder.svg"}
                         alt={`${executive.name}, ${executive.role} at Erik industrial & Construction Rentals`}
@@ -164,8 +172,8 @@ export default function AboutPage() {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Customer Focus</h3>
                   <p className="text-gray-600">
-                    We&apos;re committed to understanding and exceeding our customers&apos; expectations in
-                    everything we do.
+                    We&apos;re committed to understanding and exceeding our customers&apos;
+                    expectations in everything we do.
                   </p>
                 </Card>
 

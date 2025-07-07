@@ -18,6 +18,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import toast from "react-hot-toast";
+import Head from "next/head";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -69,6 +70,13 @@ export default function ContactPage() {
 
   return (
     <>
+      <Head>
+        <title>
+          Contact Us - Erik industrial & Construction Rentals - Industrial & Construction Equipment
+          Rentals & Tools
+        </title>
+        <meta name="description" content="Learn about our company and what we do" />
+      </Head>
       <Header />
       <section className="min-h-screen bg-white py-16">
         <div className="container mx-auto px-6 py-8">
