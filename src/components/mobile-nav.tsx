@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { MdShoppingCart } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -10,6 +10,7 @@ import { LuCircleUserRound } from "react-icons/lu";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const rentSublinks = [
   "All Equipment",
@@ -137,9 +138,9 @@ export default function MobileNav() {
         </button>
 
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetContent side="left" className="w-[300px]">
+          <SheetContent side="left" className="w-[300px] overflow-y-auto">
             <SheetHeader>
-              <SheetTitle className="px-5  mt-8 bg-[#000a50]">
+              <SheetTitle className="px-5  flex items-center justify-center mt-8 bg-[#000a50]">
                 <Image
                   src="/logo.png"
                   alt="logo"
@@ -175,6 +176,7 @@ export default function MobileNav() {
                               return (
                                 <li key={id} className="text-base cursor-pointer">
                                   {sublinks}
+                                  <Link href={link?.link || "#"}></Link>
                                 </li>
                               );
                             })}
