@@ -122,14 +122,31 @@ export default function AboutFeature() {
                     key={index}
                     className="p-0 overflow-hidden hover:shadow-lg transition-shadow"
                   >
-                    <div className="relative h-90 w-full">
-                      <Image
-                        src={executive.image || "/placeholder.svg"}
-                        alt={`${executive.name}, ${executive.role} at Erik industrial & Construction Rentals`}
-                        className="object-cover object-center absolute inset-0"
-                        fill
-                      />
-                    </div>
+                    {executive.name === "Donald Erik" ? (
+                      <div
+                        className="relative h-80 w-full bg-cover "
+                        style={{
+                          backgroundImage: "url('/ceo.jpg')",
+                          backgroundPosition: "center 40%",
+                        }}
+                      ></div>
+                    ) : executive.name === "Dean S. Erik" ? (
+                      <div
+                        className="relative h-80 w-full bg-cover"
+                        style={{
+                          backgroundImage: "url('/ceo3.jpg')",
+                          backgroundPosition: "center 20%",
+                        }}
+                      ></div>
+                    ) : (
+                      <div
+                        className="relative h-80 w-full bg-cover"
+                        style={{
+                          backgroundImage: "url('/ceo-lady.jpg')",
+                          backgroundPosition: "center 20%",
+                        }}
+                      ></div>
+                    )}
                     <CardContent className="p-6">
                       <h3 className="text-xl font-bold text-gray-900 mb-2">{executive.name}</h3>
                       <p className="text-blue-600 font-medium mb-3">{executive.role}</p>
