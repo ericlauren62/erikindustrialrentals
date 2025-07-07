@@ -1,5 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-Sitemap: https://erikindustrialrentals.com/sitemap.xml
+# Host
+Host: https://erikindustrialrentals.com
 
+# Sitemaps
+Sitemap: https://erikindustrialrentals.com/sitemap.xml
